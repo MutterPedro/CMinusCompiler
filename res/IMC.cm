@@ -1,0 +1,37 @@
+float imc(float altura, float peso){
+    return peso/(altura*altura);
+}
+
+int main(){
+    float alturas[5];
+    float pesos[5];
+    float imc;
+    int resultados[5];
+    int i;
+    i = 0;
+    alturas[0] = 170;
+    alturas[1] = 180;
+    alturas[2] = 152;
+    alturas[3] = 195;
+    alturas[4] = 164;
+    pesos[0] = 80;
+    pesos[1] = 90;
+    pesos[2] = 65;
+    pesos[3] = 99;
+    pesos[4] = 78;
+
+    while(i < 5){
+        imc = imc(alturas[i], pesos[i]);
+        if(imc<=18.50){
+            resultados[i] = 0;
+        } if(imc<25.00){
+            resultados[i] = 1;
+        } if(imc<30.00){
+            resultados[i] = 2;
+        } if(imc>=30.00) {
+            resultados[i] = 3;
+        }
+        i = i + 1;
+    }
+
+}
